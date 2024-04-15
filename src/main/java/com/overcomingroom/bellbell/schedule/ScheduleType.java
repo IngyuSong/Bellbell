@@ -1,5 +1,5 @@
 package com.overcomingroom.bellbell.schedule;
 
 public enum ScheduleType {
-  WEATHER, LUNCH, USER, PARCEL
+  WEATHER, LUNCH, USER, PARCEL, FORTUNE
 }

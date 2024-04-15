@@ -24,7 +24,7 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://ingyu.iptime.org") // 허용할 Origin 을 지정합니다. 필요에 따라 변경 가능합니다.
+                .allowedOrigins("http://localhost:8081") // 허용할 Origin 을 지정합니다. 필요에 따라 변경 가능합니다.
                 .allowedMethods("*") // 모든 HTTP 메서드를 허용합니다.
                 .allowedHeaders("*") // 모든 헤더를 허용합니다.
                 .allowCredentials(true) // 인증 정보를 허용합니다.

@@ -31,7 +31,11 @@ public enum ResponseCode {
 
   // Lunch
   LUNCH_ACTIVATE_SUCCESSFUL(HttpStatus.OK, "200", "점심 알림 활성화 성공"),
-  LUNCH_INFO_GET_SUCCESSFUL(HttpStatus.OK, "200", "점심 알림 가져오기 성공");
+  LUNCH_INFO_GET_SUCCESSFUL(HttpStatus.OK, "200", "점심 알림 가져오기 성공"),
+
+  // Fortune
+  FORTUNE_ACTIVATE_SUCCESSFUL(HttpStatus.OK, "200", "오늘의 운세 알림 활성화 성공"),
+  FORTUNE_INFO_GET_SUCCESSFUL(HttpStatus.OK, "200", "오늘의 운세 알림 가져오기 성공");
 
   private final HttpStatus httpStatus;
   private final String code;

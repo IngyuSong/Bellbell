@@ -39,6 +39,10 @@ public enum ErrorCode {
     MEMBER_NOT_FOUND_IN_LUNCH(HttpStatus.BAD_REQUEST, "lunch 에서 멤버 정보를 찾을 수 없습니다."),
     NOT_EXISTS_LUNCH_INFO(HttpStatus.BAD_REQUEST, "lunch 정보가 존재하지 않습니다."),
 
+    // Fortune
+    MEMBER_NOT_FOUND_IN_FORTUNE(HttpStatus.BAD_REQUEST, "fortune 에서 멤버 정보를 찾을 수 없습니다."),
+    NOT_EXISTS_FORTUNE_INFO(HttpStatus.BAD_REQUEST, "fortune 정보가 존재하지 않습니다."),
+
     // MESSAGE
     MESSAGE_SENDING_FAILED(HttpStatus.BAD_REQUEST, "메시지 전송 실패");
 

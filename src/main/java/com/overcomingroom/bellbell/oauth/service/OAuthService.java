@@ -2,6 +2,7 @@ package com.overcomingroom.bellbell.oauth.service;
 
 import com.overcomingroom.bellbell.exception.CustomException;
 import com.overcomingroom.bellbell.exception.ErrorCode;
+import com.overcomingroom.bellbell.fortune.service.FortuneService;
 import com.overcomingroom.bellbell.lunch.service.LunchService;
 import com.overcomingroom.bellbell.member.domain.dto.KakaoUserInfo;
 import com.overcomingroom.bellbell.member.domain.entity.Member;
@@ -32,6 +33,7 @@ public class OAuthService {
   private final RedisRepository redisRepository;
   private final WeatherService weatherService;
   private final LunchService lunchService;
+  private final FortuneService fortuneService;
 
   @Value("${spring.security.oauth2.client.registration.kakao.client-id}")
   private String clientId;
@@ -89,6 +91,9 @@ public class OAuthService {
     }
     if (lunchService.getLunchByMember(getMember).isEmpty()) {
       lunchService.setLunch(getMember);
+    }
+    if (fortuneService.getfortuneByMember(getMember).isEmpty()) {
+      fortuneService.setFortune(getMember);
     }
 
     // Redis 에 토큰 저장
